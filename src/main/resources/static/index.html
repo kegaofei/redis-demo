@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+	
+		<table border="1">
+			<tbody id = "articleShowBody">
+			</tbody>
+		</table>
+		<button onclick="getArticlesByScore()">display by score</button>
+		<button onclick="getArticlesByTime()">display by time</button>
+		<br><br>
+	
+		<hr style="border:1px dashed #000; height:1px">
+	
+		<div style="float: left;">
+			<form action="javascript:addArticle();">
+				Article title:<br>
+				<input type="text" id="addTitle" name="title" value="">
+				<br>
+				Article user:<br>
+				<input type="text" id="addUser" name="user" value="">
+				<br>
+				Article link:<br>
+				<input type="text"  id="addLink" name="link" value="">
+				<br>
+				<input type="submit" value="Add article">
+			</form>
+		</div>
+		
+		<div style="float: left;">
+			<form action="javascript:articleVote();">
+				Article Id:<br>
+				<input type="text" id="voteId" name="id" value="">
+				<br>
+				Article user:<br>
+				<input type="text" id="voteUser" name="user" value="">
+				<br>
+				<input type="submit" value="+ Vote">
+			</form>
+		</div>
+		
+		<div style="float: left;">
+		    <form action="javascript:cancelArticleVote();">
+				Article Id:<br>
+				<input type="text" id="cancelVoteId" name="id" value="">
+				<br>
+				Article user:<br>
+				<input type="text" id="cancelVoteUser" name="user" value="">
+				<br>
+				<input type="submit" value="- Vote">
+			</form>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>	
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>
